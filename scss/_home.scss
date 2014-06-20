@@ -1,0 +1,57 @@
+
+/*###############################
+               HOME
+###############################*/
+
+h2 {
+	text-align: center;
+	padding: 20px;
+	font-family: $raleway;
+	font-weight: normal;
+	color: $beige;
+}
+
+header {
+	text-align: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 20px auto;
+}
+
+
+
+.main-nav li {
+	display: inline;
+}
+
+.rond {
+	border-radius: 50%;
+}
+
+#life header {
+	background: url(../images/poney-rock.png) fixed right;
+	background-size: cover;
+	margin: 20px 0;
+}
+
+#folks header {
+	background: url(../images/poney-rock.png) fixed right;
+	background-size: cover;
+	margin: 20px 0;
+}
+
+#love header {
+	background: url(../images/poney-rock.png) fixed right;
+	background-size: cover;
+	margin: 20px 0;
+}
+
+@media (min-width:500px) and (max-width: 960px) {
+	.black-mobile {
+		background-color: black;
+	}
+
+	.main-nav li {
+		display: block;
+	}
+}
