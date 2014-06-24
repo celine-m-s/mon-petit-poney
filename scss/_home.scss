@@ -3,6 +3,10 @@
                HOME
 ###############################*/
 
+body {
+	background-image: $halftone;
+}
+
 h1, h2 {
 	text-align: center;
 	font-family: arial;
@@ -12,11 +16,21 @@ h1, h2 {
 
 h1 {
 	font-size: 3rem;
+	color: $red;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 h2 {
 	font-size: 2rem;
 	margin-bottom: 40px;
+	color: $blue;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 
@@ -36,21 +50,42 @@ h2 {
 	border: none;
 	box-shadow: none;
 	background-image: none;
-	background-color: #d1c2bb;
+	background-color: $blue;
 	padding-bottom: 0;
 }
 
+.navbar-default .navbar-nav li a {
+	color: $red;
+	text-shadow: none;
+
+	&:hover {
+		color: $red;
+		opacity: 0.8;
+	}
+}
+
 #menu-menu-2 {
-	border-top: 1px solid black; 
-	border-bottom: 1px solid black; 
 	text-align: center;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
+	background-color: $red;
+	border-radius: 5px; 
 }
 
 #menu-menu-2 li {
 	display: inline-block;
-	line-height: 50px;
+	margin: 0 20px;
+	line-height: 40px;
+
+	& a {
+		color: $blue;
+	}
+
+	& a:hover {
+		opacity: 0.7;
+	}
 }
+
+
 
 article img {
 	display: block;

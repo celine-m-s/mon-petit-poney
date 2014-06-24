@@ -43,6 +43,7 @@
 			  	</div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <!-- Ajouter un menu (étape 3 avec Bootstrap) et gérée par WordPress.  -->
 			    <?php
 	          wp_nav_menu( array(
 	              'menu'              => 'primary',
@@ -59,10 +60,11 @@
 		
 			  </div><!-- /.container-fluid -->
 			</nav>
-	     			 <?php 
-	     			 wp_nav_menu( array(
-	     			 'theme_location' 			=> 'secondary-nav', 
-	     			 'menu_class'					  => 'secondary-nav',) 
-	     			 ); 
-	     			 ?>
+			<!-- ajouter un menu : étape 2 || Puis on va le créer dans l'interface d'administration (apparence > menus > créez un nouveau menu)  -->
+		 <?php 
+		 wp_nav_menu( array(
+		 'theme_location' 			=> 'secondary-nav', 
+		 'menu_class'					  => 'secondary-nav',) 
+		 ); 
+		 ?>
 		</header>
