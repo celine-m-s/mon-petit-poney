@@ -5,31 +5,57 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Blog photographie</title>
+	<title><?php wp_title(); ?></title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+	<?php wp_head(); ?>
+
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css">
 
 </head>
 
 <body>
-	<header>
-		<div class="black-mobile">
-			<h1><img src="images/logo-poney.png" alt="Ma vie de Poney"></h1>
-			<img src="images/poney.jpg" width="200px" class="rond">
-			<nav>
-				<ul class="main-nav">
-					<li><a href="#life">Ma vie</a></li>
-					<li><a href="#folks">Mes copains</a></li>
-					<li><a href="#love">J'aime !</a></li>
-				</ul>
+	<div class="container">
+		<header>
+			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+			<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"></a></div> 
+			<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('description'); ?></a></h2>
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			  	</div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <?php
+	          wp_nav_menu( array(
+	              'menu'              => 'primary',
+	              'theme_location'    => 'primary',
+	              'depth'             => 2,
+	              'container'         => 'div',
+	              'container_class'   => 'collapse navbar-collapse',
+	      				'container_id'      => 'bs-example-navbar-collapse-1',
+	              'menu_class'        => 'nav navbar-nav',
+	              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+	              'walker'            => new wp_bootstrap_navwalker())
+	          );
+	     			 ?>		
+			  </div><!-- /.container-fluid -->
 			</nav>
-		</div>
-	</header>
+		</header>

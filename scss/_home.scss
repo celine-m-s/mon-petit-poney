@@ -3,55 +3,48 @@
                HOME
 ###############################*/
 
+h1, h2 {
+	text-align: center;
+	font-family: arial;
+	margin: 10px auto;
+	
+}
+
+h1 {
+	font-size: 3rem;
+}
+
 h2 {
+	font-size: 2rem;
+	margin-bottom: 40px;
+}
+
+
+
+.navbar .navbar-nav{
+	display: inline-block;
+	float: none;
+	margin-bottom: -10px;
+}
+
+.navbar .navbar-collapse{
 	text-align: center;
-	padding: 20px;
-	font-family: $raleway;
-	font-weight: normal;
-	color: $beige;
 }
 
-header {
+.navbar.navbar-default{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	background-image: none;
+	background-color: #d1c2bb;
+	padding-bottom: 0;
+}
+
+article img {
+	display: block;
+	margin: 20px auto;
+}
+
+.legend {
 	text-align: center;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	padding: 20px auto;
-}
-
-
-
-.main-nav li {
-	display: inline;
-}
-
-.rond {
-	border-radius: 50%;
-}
-
-#life header {
-	background: url(../images/poney-rock.png) fixed right;
-	background-size: cover;
-	margin: 20px 0;
-}
-
-#folks header {
-	background: url(../images/poney-rock.png) fixed right;
-	background-size: cover;
-	margin: 20px 0;
-}
-
-#love header {
-	background: url(../images/poney-rock.png) fixed right;
-	background-size: cover;
-	margin: 20px 0;
-}
-
-@media (min-width:500px) and (max-width: 960px) {
-	.black-mobile {
-		background-color: black;
-	}
-
-	.main-nav li {
-		display: block;
-	}
 }
