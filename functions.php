@@ -1,8 +1,5 @@
 <?php
 
-// Register Custom Navigation Walker
-require_once('wp_bootstrap_navwalker.php');
-
 // Mettre une sidebar avec des Widgets
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
@@ -28,14 +25,21 @@ if ( function_exists('register_sidebar') )
         'after_title'   => '</h4>',
     ));
 
-// Utiliser Bootstrap dans un menu appelé "primary"
+// Utiliser Bootstrap dans un menu appelé "primary" et ajouter un second menu appelé "Secondary Menu"
 // http://code.tutsplus.com/tutorials/how-to-integrate-bootstrap-navbar-into-wordpress-theme--wp-33410
-register_nav_menus( array(
+function register_my_menus() { 
+  register_nav_menus (
+    array(
     'primary' => __( 'Primary Menu', 'THEMENAME' ),
-) );
+    'secondary-nav' => __( 'Secondary Menu', 'THEMENAME' ),
+    ) 
+  );
+}
+
+add_action( 'init', 'register_my_menus' );
 
 // Register Custom Navigation Walker -- https://github.com/twittem/wp-bootstrap-navwalker
-// require_once('wp_bootstrap_navwalker.php');
+require_once('wp_bootstrap_navwalker.php');
 
 // Ajouter des images à la une ("thumbnail")
 add_theme_support( 'post-thumbnails' );

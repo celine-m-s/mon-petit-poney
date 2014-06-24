@@ -54,12 +54,26 @@ h2 {
 }
 
 /* line 43, scss/_home.scss */
+#menu-menu-2 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 50, scss/_home.scss */
+#menu-menu-2 li {
+  display: inline-block;
+  line-height: 50px;
+}
+
+/* line 55, scss/_home.scss */
 article img {
   display: block;
   margin: 20px auto;
 }
 
-/* line 48, scss/_home.scss */
+/* line 60, scss/_home.scss */
 .legend {
   text-align: center;
 }

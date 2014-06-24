@@ -55,7 +55,14 @@
 	              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 	              'walker'            => new wp_bootstrap_navwalker())
 	          );
-	     			 ?>		
+	     			 ?>
+		
 			  </div><!-- /.container-fluid -->
 			</nav>
+	     			 <?php 
+	     			 wp_nav_menu( array(
+	     			 'theme_location' 			=> 'secondary-nav', 
+	     			 'menu_class'					  => 'secondary-nav',) 
+	     			 ); 
+	     			 ?>
 		</header>
