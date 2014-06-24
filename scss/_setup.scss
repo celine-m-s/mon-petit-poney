@@ -15,3 +15,11 @@ $raleway:	'Raleway', sans-serif;
 $congruent: url(scss/congruent_pentagon.png);
 $skulls: url(scss/skulls.png);
 $halftone: url(scss/halftone.png);
+
+@mixin transition($seconds) {
+	-webkit-transition: opacity $seconds linear;
+	-moz-transition: opacity $seconds linear;
+	-ms-transition: opacity $seconds linear;
+	-o-transition: opacity $seconds linear;
+	transition: opacity $seconds linear;
+}

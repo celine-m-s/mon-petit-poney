@@ -71,9 +71,9 @@
     </div> <!-- fermeture div class col-md-9 -->
 
     <div class="col-md-3">
-<!--     	<aside>
+    	<aside>
   			<?php dynamic_sidebar('main-sidebar'); ?>
-  		</aside> -->
+  		</aside>
   	</div> <!-- fermeture sidebar -->
 	          
 	        
