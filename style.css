@@ -90,7 +90,7 @@ h2:hover {
 /* line 74, scss/_home.scss */
 #menu-menu-2 li {
   display: inline-block;
-  margin: 0 20px;
+  padding: 0 20px;
   line-height: 40px;
 }
 /* line 79, scss/_home.scss */
@@ -139,11 +139,11 @@ a:hover {
 /* line 40, scss/style.scss */
 a img:hover {
   opacity: 0.7;
-  -webkit-transition: opacity 0.2s linear;
-  -moz-transition: opacity 0.2s linear;
-  -ms-transition: opacity 0.2s linear;
-  -o-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0s linear;
+  -moz-transition: opacity 0s linear;
+  -ms-transition: opacity 0s linear;
+  -o-transition: opacity 0s linear;
+  transition: opacity 0s linear;
 }
 
 /* line 45, scss/style.scss */

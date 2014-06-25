@@ -10,12 +10,16 @@
 		     		<div class="date">
 		     			<?php the_date(); ?></div>
 		      	<h2>
-		        	<?php the_title(); ?>
+		        	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		      	</h2>
-		      	<div class="image"></div>
-		      	<?php the_post_thumbnail('full', array("class" => "img-responsive")); ?>
+		      	<div class="image">
+		      		<?php the_post_thumbnail('full', array("class" => "img-responsive")); ?>
+		      	</div>
 		      	<div class="post-content">
 		        	<?php the_content(); ?>
+		      	</div>
+		      	<div lass="tags">
+		      		<?php the_tags( 'Mots-clés : ', ', ', '' );?>
 		      	</div>
 		      	<p class="post-info">
 		        	Posté dans <?php the_category(', '); ?> par <?php the_author(); ?>.

@@ -30,6 +30,13 @@
 			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 			<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"></a></div> 
 			<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('description'); ?></a></h2>
+			
+
+
+
+
+
+
 			<nav class="navbar navbar-default" role="navigation">
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,7 +57,7 @@
 	              'theme_location'    => 'primary',
 	              'depth'             => 2,
 	              'container'         => 'div',
-	              'container_class'   => 'collapse navbar-collapse',
+	              'container_class'   => 'collapse navbar-collapse row',
 	      				'container_id'      => 'bs-example-navbar-collapse-1',
 	              'menu_class'        => 'nav navbar-nav',
 	              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
@@ -67,4 +74,8 @@
 		 'menu_class'					  => 'secondary-nav',) 
 		 ); 
 		 ?>
+
+
+
+
 		</header>

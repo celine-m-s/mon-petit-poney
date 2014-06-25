@@ -9,8 +9,8 @@ add_theme_support( 'post-thumbnails' );
 function register_my_menus() { 
   register_nav_menus (
     array(
-    'primary' => __( 'Primary Menu', 'THEMENAME' ),
-    'secondary-nav' => __( 'Secondary Menu', 'THEMENAME' ),
+    'primary' => __( 'Primary Menu', 'blog' ),
+    'secondary-nav' => __( 'Secondary Menu', 'blog' ),
     ) 
   );
 }
@@ -97,3 +97,24 @@ function wc_remove_related_products( $args ) {
   return array();
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10); 
+
+if( !function_exists( 'wts' ) ):
+function wts()
+{
+wp_deregister_style ( 'woocommerce-twitterbootstrap');  
+wp_dequeue_style( 'woocommerce-twitterbootstrap');
+wp_register_style ( 'woocommerce-twitterbootstrap', get_stylesheet_directory_uri() . '/vendor/woocommerce-twitterbootstrap/css/woocommerce-twitterboostrap.css', 'woocommerce' );
+wp_enqueue_style( 'woocommerce-twitterbootstrap');
+}
+endif;  
+add_action( 'wp_enqueue_scripts', 'wts', 200 ); 
+
+
+remove_action('admin_menu',array($woocommercetwitterbootstrap,'add_menu'));
+add_action('admin_menu','woocommerce_twitterbootstrap_add_menu');
+/** * add a menu */ 
+function woocommerce_twitterbootstrap_add_menu() 
+{
+     global $woocommercetwitterbootstrap;
+     add_theme_page('WooCommerce Twitter Bootstrap Settings', 'WooCommerce Bootstrap', 'manage_options', 'woocommerce-twitterbootstrap', array($woocommercetwitterbootstrap, 'plugin_settings_page'));
+} // END public function add_menu()
