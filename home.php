@@ -1,4 +1,6 @@
 
+<?php get_header(); ?>
+
 	<div class="row">
   <div class="col-md-9">
       <section>
