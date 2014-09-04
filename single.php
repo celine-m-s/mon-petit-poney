@@ -24,9 +24,10 @@
 		      	<p class="post-info">
 		        	Posté dans <?php the_category(', '); ?> par <?php the_author(); ?>.
 		      	</p>
-		      	<?php wp_related_posts(); ?>
+
 		      	<div class="post-comments">
-		          <?php comments_template(); ?>
+		          			<div>
+		                			<?php comments_template('', true); ?>
 		        </div>      	
 					</div>
 				<?php endwhile; ?>
