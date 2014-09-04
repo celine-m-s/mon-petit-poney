@@ -53,8 +53,8 @@
 			    <!-- Ajouter un menu (étape 3 avec Bootstrap) et gérée par WordPress.  -->
 			    <?php
 	          wp_nav_menu( array(
-	              'menu'              => 'primary',
-	              'theme_location'    => 'primary',
+	              'menu'              => 'test-nav',
+	              'theme_location'    => 'test-nav',
 	              'depth'             => 2,
 	              'container'         => 'div',
 	              'container_class'   => 'collapse navbar-collapse row',

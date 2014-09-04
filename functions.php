@@ -9,7 +9,7 @@ add_theme_support( 'post-thumbnails' );
 function register_my_menus() { 
   register_nav_menus (
     array(
-    'primary' => __( 'Primary Menu', 'blog' ),
+    'test-nav' => __( 'Test Nav', 'blog' ),
     'secondary-nav' => __( 'Secondary Menu', 'blog' ),
     ) 
   );
