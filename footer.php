@@ -4,7 +4,13 @@
 Tous droits réservés -- Web-Design Express
 </footer>
 
-
+<?php
+   /* Always have wp_footer() just before the closing </body>
+    * tag of your theme, or you will break many plugins, which
+    * generally use this hook to reference JavaScript files.
+    */
+    wp_footer();
+?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
